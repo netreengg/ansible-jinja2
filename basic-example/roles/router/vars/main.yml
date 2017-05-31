@@ -1,0 +1,14 @@
+---
+routers:
+ - hostname: ar4.BLB
+   vendor: Cisco
+   model: NCS5501
+   interfaces:
+    - ifname: Loopback0
+      description: '##Loopback for BGP/ISIS/MPLS##'
+      mgmt_ip: 10.91.126.114
+      netmask: 255.255.255.255
+    - ifname: MgmtEth0/RP0/CPU0/0
+      description: '##Connected to msw5.BLB GigabitEthernet1/0/8 ##'
+      mgmt_ip: 10.91.143.114
+      netmask: 255.255.252.0

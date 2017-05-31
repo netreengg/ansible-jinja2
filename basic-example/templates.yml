@@ -1,0 +1,7 @@
+---
+- name: Generate Router Configurations
+  gather_facts: no
+  hosts: localhost
+
+  roles:
+   - router

@@ -1,0 +1,5 @@
+---
+- name: Generate Configuration Files
+  template: src={{ item.vendor }}-{{ item.model }}.j2 dest=/root/ngpacket/{{ item.hostname }}.cfg
+  with_items:
+   routers

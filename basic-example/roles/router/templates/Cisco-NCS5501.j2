@@ -1,0 +1,13 @@
+!
+hostname {{ item.hostname }}
+domain name {{ domain_name }}
+domain name-server {{ domain_name_server }}
+{% for trap in snmp_traps %}
+snmp-server host {{ trap.host }} traps version {{ trap.version }} {{ trap.community }}
+{% endfor %}
+{% for interface in item.interfaces %}
+!
+interface {{ interface.ifname }} 
+ description {{ interface.description }} 
+ ipv4 address {{ interface.mgmt_ip }} {{ interface.netmask }}
+{% endfor %}

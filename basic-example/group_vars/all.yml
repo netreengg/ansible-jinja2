@@ -1,0 +1,10 @@
+---
+domain_name: router.colt.net
+domain_name_server: 10.91.141.58
+snmp_traps:
+ - host: 10.91.142.62
+   version: 2c
+   community: Joker543@1
+ - host: 10.91.142.64
+   version: 2c
+   community: Joker543@1
